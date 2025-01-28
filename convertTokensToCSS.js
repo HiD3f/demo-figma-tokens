@@ -24,8 +24,14 @@ variables.sort();
 cssContent += variables.join('\n');
 cssContent += '\n}\n';
 
-// Write the CSS content to a file
-const cssFilePath = path.join(__dirname, 'tokens.css');
+// Ensure the /dist directory exists
+const distDir = path.join(__dirname, 'dist');
+if (!fs.existsSync(distDir)) {
+  fs.mkdirSync(distDir);
+}
+
+// Write the CSS content to a file in /dist
+const cssFilePath = path.join(distDir, 'tokens.css');
 fs.writeFileSync(cssFilePath, cssContent, 'utf8');
 
 console.log('CSS file generated successfully:', cssFilePath);
