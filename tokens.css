@@ -1,0 +1,25 @@
+:root {
+  --Palette-black: rgba(0, 0, 0, 1);
+  --Palette-blue-light: rgba(26, 188, 254, 1);
+  --Palette-grey-darker: rgba(146, 146, 146, 1);
+  --Palette-grey-neutral: rgba(229, 229, 229, 1);
+  --Palette-navy-base: rgba(36, 51, 91, 1);
+  --Palette-navy-dark: rgba(27, 39, 71, 1);
+  --Palette-orange-base: rgba(252, 101, 21, 1);
+  --Palette-orange-dark: rgba(227, 78, 0, 1);
+  --Palette-red-error: rgba(225, 0, 15, 1);
+  --Palette-white: rgba(255, 255, 255, 1);
+  --Tokens-button-active-outline-color: rgba(26, 188, 254, 1);
+  --Tokens-button-disabled-bg: rgba(229, 229, 229, 1);
+  --Tokens-button-disabled-text-color: rgba(146, 146, 146, 1);
+  --Tokens-button-primary-active-bg: rgba(227, 78, 0, 1);
+  --Tokens-button-primary-bg: rgba(36, 51, 91, 1);
+  --Tokens-button-primary-focused-bg: rgba(36, 51, 91, 1);
+  --Tokens-button-primary-hover-bg: rgba(252, 101, 21, 1);
+  --Tokens-button-primary-text-color: rgba(255, 255, 255, 1);
+  --Tokens-dropdown-border-color: rgba(36, 51, 91, 1);
+  --Tokens-dropdown-item-hover-bg: rgba(36, 51, 91, 1);
+  --Tokens-dropdown-item-text-color: rgba(36, 51, 91, 1);
+  --Tokens-theme-accent-color: rgba(252, 101, 21, 1);
+  --Tokens-theme-primary-color: rgba(36, 51, 91, 1);
+}
