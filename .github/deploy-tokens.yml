@@ -1,0 +1,42 @@
+
+name: Publish Tokens Library
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers when a new version tag (e.g., v1.0.0) is pushed
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Node.js 22.12.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.12.0
+          registry-url: https://npm.pkg.github.com/
+          scope: "@hid3f"
+
+      - name: Verify Node.js Version
+        run: node -v
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Library
+        run: |
+          npm run format-tokens && npm run convert-tokens
+
+      - name: Publish to GitHub Packages
+        run: |
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
